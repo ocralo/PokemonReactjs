@@ -99,6 +99,23 @@ export default class Home extends Component {
     };
   }
 
+  componentDidUpdate() {
+    if (this.state.defensePokemon.nuLife <= 0) {
+      var rD = window.confirm("¡Has ganado!, deseas volver a jugar?");
+      if (rD === true) {
+        window.location.reload();
+      } else {
+      }
+    }
+    if (this.state.atackPokemon.nuLife <= 0) {
+      var rA = window.confirm("¡Has Perdido!, deseas volver a jugar?");
+      if (rA === true) {
+        window.location.reload();
+      } else {
+      }
+    }
+  }
+
   handleRef = video => {
     this.videoRef = video;
   };
