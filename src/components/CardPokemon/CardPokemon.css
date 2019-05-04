@@ -1,0 +1,15 @@
+.rel-cardPokemon-sex{
+  font-size: 2em;
+}
+
+.rel-cardPokemon-container{
+border: 3px solid #474948;
+background: rgba(153,153,153,1);
+background: -moz-linear-gradient(top, rgba(153,153,153,1) 0%, rgba(242,242,242,1) 18%, rgba(242,242,242,1) 22%, rgba(156,153,156,1) 26%, rgba(219,219,219,1) 30%, rgba(255,255,255,1) 34%, rgba(133,133,133,1) 38%, rgba(133,133,133,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(153,153,153,1)), color-stop(18%, rgba(242,242,242,1)), color-stop(22%, rgba(242,242,242,1)), color-stop(26%, rgba(156,153,156,1)), color-stop(30%, rgba(219,219,219,1)), color-stop(34%, rgba(255,255,255,1)), color-stop(38%, rgba(133,133,133,1)), color-stop(100%, rgba(133,133,133,1)));
+background: -webkit-linear-gradient(top, rgba(153,153,153,1) 0%, rgba(242,242,242,1) 18%, rgba(242,242,242,1) 22%, rgba(156,153,156,1) 26%, rgba(219,219,219,1) 30%, rgba(255,255,255,1) 34%, rgba(133,133,133,1) 38%, rgba(133,133,133,1) 100%);
+background: -o-linear-gradient(top, rgba(153,153,153,1) 0%, rgba(242,242,242,1) 18%, rgba(242,242,242,1) 22%, rgba(156,153,156,1) 26%, rgba(219,219,219,1) 30%, rgba(255,255,255,1) 34%, rgba(133,133,133,1) 38%, rgba(133,133,133,1) 100%);
+background: -ms-linear-gradient(top, rgba(153,153,153,1) 0%, rgba(242,242,242,1) 18%, rgba(242,242,242,1) 22%, rgba(156,153,156,1) 26%, rgba(219,219,219,1) 30%, rgba(255,255,255,1) 34%, rgba(133,133,133,1) 38%, rgba(133,133,133,1) 100%);
+background: linear-gradient(to bottom, rgba(153,153,153,1) 0%, rgba(242,242,242,1) 18%, rgba(242,242,242,1) 22%, rgba(156,153,156,1) 26%, rgba(219,219,219,1) 30%, rgba(255,255,255,1) 34%, rgba(133,133,133,1) 38%, rgba(133,133,133,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999999', endColorstr='#858585', GradientType=0 );
+}

@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+body,html{
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Press Start 2P', cursive !important;
+  /* font-family: 'VT323', monospace !important; */
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
