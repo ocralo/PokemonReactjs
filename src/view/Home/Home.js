@@ -33,7 +33,6 @@ export default class Home extends Component {
         this.audioRef.play();
         this.randomAtack();
       }
-      
     } else {
       this.setState({
         stateAtack: false
@@ -49,19 +48,13 @@ export default class Home extends Component {
   pokemonAtackHp(atackNumber) {
     var auxP = this.state.atackPokemon;
     var hpPokemon = this.state.atackPokemon.nuLife;
-    this.setState({
-      animateAt: false,
-      animateDf: true
-    });
     // var defPokemon = this.state.atackPokemon.nuDf;
     if (!hpPokemon <= 0 && !this.state.stateAtack) {
       if (hpPokemon - atackNumber < 0) {
-        
         auxP.nuLife = hpPokemon - hpPokemon;
       } else {
         auxP.nuLife = hpPokemon - atackNumber;
       }
-      
     } else {
       this.setState({
         stateAtack: false
@@ -131,7 +124,6 @@ export default class Home extends Component {
               flag={true}
               pokemon={this.state.defensePokemon}
               pokemonDefenseHpFunction={this.pokemonDefenseHp}
-              animate={this.state.animateAt}
               textM={this.state.textM}
             />
           </div>
@@ -143,7 +135,6 @@ export default class Home extends Component {
               pokemon={this.state.atackPokemon}
               pokemonDefenseHpFunction={this.pokemonDefenseHp}
               textM={this.state.textM}
-              animate={this.state.animateDf}
             />
           </div>
         </div>

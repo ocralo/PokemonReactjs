@@ -10,6 +10,21 @@ export default class ButtonsAtack extends Component {
       changeTextHover: this.props.changeTextHoverFunction,
       changeNoFigthFunction: this.props.changeNoFigth
     };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    var pokemonAtack = document.getElementById("atack");
+    var pokemonDef = document.getElementById("def");
+    pokemonAtack.classList.add("animated", "pulse");
+    setTimeout(() => {
+      pokemonAtack.classList.remove("animated", "pulse");
+    }, 2000);
+    setTimeout(() => {
+    pokemonDef.classList.add("animated", "pulse");
+    }, 3000);
+    setTimeout(() => {
+      pokemonDef.classList.remove("animated", "pulse");
+    }, 4000);
   }
 
   render() {
@@ -30,6 +45,7 @@ export default class ButtonsAtack extends Component {
                   this.props.atacksPokemon[0].nuAtckPower
                 );
                 this.props.changeNoFigthFunction();
+                this.handleClick();
               }}
             >
               {this.props.atacksPokemon[0].stAtckName}
@@ -49,6 +65,7 @@ export default class ButtonsAtack extends Component {
                   this.props.atacksPokemon[1].nuAtckPower
                 );
                 this.props.changeNoFigthFunction();
+                this.handleClick();
               }}
             >
               {this.props.atacksPokemon[1].stAtckName}
@@ -70,6 +87,7 @@ export default class ButtonsAtack extends Component {
                   this.props.atacksPokemon[2].nuAtckPower
                 );
                 this.props.changeNoFigthFunction();
+                this.handleClick();
               }}
             >
               {this.props.atacksPokemon[2].stAtckName}
@@ -89,6 +107,7 @@ export default class ButtonsAtack extends Component {
                   this.props.atacksPokemon[3].nuAtckPower
                 );
                 this.props.changeNoFigthFunction();
+                this.handleClick();
               }}
             >
               {this.props.atacksPokemon[3].stAtckName}

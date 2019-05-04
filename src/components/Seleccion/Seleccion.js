@@ -9,11 +9,20 @@ export default class Seleccion extends Component {
       changeFigth: this.props.changeFigthFunction
     };
     this.handleRefButton = this.handleRefButton.bind(this);
+    this.alertClick = this.alertClick.bind(this);
+    this.alertClickRun = this.alertClickRun.bind(this);
   }
 
   handleClick(e) {
     this.state.changeFigth();
     this.butonSelectRef.play();
+  }
+
+  alertClick() {
+    alert("No esta implementado actualmente. T_T");
+  }
+  alertClickRun() {
+    alert("No seas cobarde :V");
   }
 
   handleRefButton = video => {
@@ -35,6 +44,7 @@ export default class Seleccion extends Component {
                 type="button"
                 className="btn btn-danger rel-border-light rounded-pill font-weight-bold w-100 h-100"
                 onClick={this.handleClick}
+                onMouseOver={() => this.props.ButtonHoverFunction()}
               >
                 FIGHT
               </button>
@@ -43,6 +53,8 @@ export default class Seleccion extends Component {
               <button
                 type="button"
                 className="btn btn-success rel-border-light rounded-pill font-weight-bold w-100 h-100"
+                onMouseOver={() => this.props.ButtonHoverFunction()}
+                onClick={this.alertClick}
               >
                 POKÉMON
               </button>
@@ -53,6 +65,8 @@ export default class Seleccion extends Component {
               <button
                 type="button"
                 className="btn btn-secondary rel-border-light rounded-pill font-weight-bold w-100 h-100"
+                onMouseOver={() => this.props.ButtonHoverFunction()}
+                onClick={this.alertClick}
               >
                 BAG
               </button>
@@ -61,6 +75,8 @@ export default class Seleccion extends Component {
               <button
                 type="button"
                 className="btn btn-primary rel-border-light rounded-pill font-weight-bold w-100 h-100"
+                onMouseOver={() => this.props.ButtonHoverFunction()}
+                onClick={this.alertClickRun}
               >
                 RUN
               </button>

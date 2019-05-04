@@ -16,11 +16,13 @@ export default class BarState extends Component {
     this.changeNoFigth = this.changeNoFigth.bind(this);
     this.changeTextHover = this.changeTextHover.bind(this);
     this.handleRefButton = this.handleRefButton.bind(this);
+    this.ButtonHover = this.ButtonHover.bind(this);
   }
   changeFigth() {
     this.setState({
       figthState: true
     });
+    this.butonSelectRef.play();
   }
 
   changeNoFigth() {
@@ -35,6 +37,11 @@ export default class BarState extends Component {
     });
     this.butonSelectRef.play();
   }
+
+  ButtonHover() {
+    this.butonSelectRef.play();
+  }
+
   handleRefButton = video => {
     this.butonSelectRef = video;
   };
@@ -64,7 +71,7 @@ export default class BarState extends Component {
             <TextMensage textM={this.props.textM} />
           </div>
           <div className="col-6 m-0 p-0">
-            <Seleccion changeFigthFunction={this.changeFigth} />
+            <Seleccion changeFigthFunction={this.changeFigth} ButtonHoverFunction={this.ButtonHover}/>
           </div>
         </div>
       );

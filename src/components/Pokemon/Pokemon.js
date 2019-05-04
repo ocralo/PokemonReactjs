@@ -10,21 +10,11 @@ export default class Pokemon extends Component {
       flag: this.props.flag,
       pokemon: this.props.pokemon,
       enemyPokemonName: this.props.enemyPokemonName,
-      textM: this.props.textM,
-      animate: this.props.animate
+      textM: this.props.textM
     };
-    this.pokemon = React.createRef(this);
+    this.pokemon = React.createRef();
   }
-  componentWillUpdate() {
-    console.log(this.props.animate + "-" + this.props.pokemon.stName);
-    this.pokemon.current.classList.remove("animated", "pulse");
-    if (this.props.animate) {
-      this.pokemon.current.classList.add("animated", "pulse");
-      setTimeout(() => {
-        this.pokemon.current.classList.remove("animated", "pulse");
-      }, 2000);
-    } 
-  }
+
   render() {
     let divstyleState;
     let selection;
@@ -45,6 +35,7 @@ export default class Pokemon extends Component {
           <div className="col-7 ">
             <img
               className="rel-pokemon-img"
+              id="atack"
               style={divstyleState}
               src={this.props.pokemon.urlImg}
               alt=""
@@ -66,6 +57,7 @@ export default class Pokemon extends Component {
                 className="rel-pokemon-img"
                 style={divstyleState}
                 src={this.props.pokemon.urlImg}
+                id="def"
                 alt=""
                 ref={this.pokemon}
               />
